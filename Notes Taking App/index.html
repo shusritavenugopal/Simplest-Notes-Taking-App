@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Activity 4 - Note Taking App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Using the W3.css for some normalization -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+  </head>  
+  <body>
+
+    
+    <div class="container">
+      <br/>
+      <h1>Notes Taking App</h1>
+      <form id="notesForm">
+        <h4><label for="email">Email:</label></h4>
+        <input type="email" id="email" name="email" required placeholder="Please enter your email.">
+        <h4><label>Day of the Week:</label></h4>
+        <div class="radio-buttons">
+          <label for="Monday"><input type="radio" id="Monday" name="day" value="Monday"> Monday</label>
+          <label for="Tuesday"><input type="radio" id="Tuesday" name="day" value="Tuesday"> Tuesday</label>
+          <label for="Wednesday"><input type="radio" id="Wednesday" name="day" value="Wednesday"> Wednesday</label>
+          <label for="Thursday"><input type="radio" id="Thursday" name="day" value="Thursday"> Thursday</label>
+          <label for="Friday"><input type="radio" id="Friday" name="day" value="Friday"> Friday</label>
+          <label for="Saturday"><input type="radio" id="Saturday" name="day" value="Saturday"> Saturday</label>
+          <label for="Sunday"><input type="radio" id="Sunday" name="day" value="Sunday"> Sunday</label>
+        </div>
+        <h4><label for="note">Note:</label></h4>
+        <textarea id="note" name="note" required placeholder="Note cannot be empty..."></textarea>
+        <button type="button" onclick="validateAndSave()">Submit</button>
+      </form>
+
+      <div id="savedNotes"></div>
+    </div>
+    
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
